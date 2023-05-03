@@ -15,10 +15,7 @@ class User {
         $user = $this->db->connect()->where('id', $id);
         return $user->get($this->table);
     }
-    public function getAllUsers()
-    {
-        return $this->db->connect()->get($this->table);
-    }
+   
 
 }
 

@@ -8,30 +8,20 @@
 <div class="row">
 
   
-<div class="row">
-    <?php foreach($user as $row):  ?>
-        <div class="col-md-5 m-3">
-            <div class="card p-4 rounded-5  border-dark" style="height:200px; box-shadow: 0px 0px 10px 0px rgb(0 0 0 / 18%);
-            ">
-                <div class="row">
-                     <div class="col-md-5 mt-3"  >
-                     <img src="<?='data:image/jpeg;base64,'.base64_encode($row['picture'])?>"  height="50%" width="100px" />
-                     <a  class="btn rounded-circle  border-dark mt-2 font-weight-bold" >-</a>
-                     <span>1</span>
-                     <a  class="btn rounded-circle  border-dark mt-2 font-weight-bold" >+</a>
-
-                     </div>
-                     <div class="col-md-7">
-                            <div class="card-body">
-                        <h4 class="card-title" style="color: rgb(112, 66, 50)"><?php echo $row['name']?></h4>
-                        <p class="card-text " >Price:<span class="font-weight-bold" style="color:orange" ><?php echo $row["price"] ?></span>$</p>
-
-                        <button href="#" class="btn rounded-pill"style="color:white;background-color:orange">Added To Cart</button>
-                     </div>
-                </div>
-            </div>
-            
-           
+        <div class="row">
+            <?php foreach($user as $row):  ?>
+                <div class="col-md-5 m-3">
+                    <div class="card p-4 rounded-5  border-dark" style=" box-shadow: 0px 0px 10px 0px rgb(0 0 0 / 18%);
+                    ">
+                        <div class="row">
+                            <div class="col-md-5 mt-3"  >
+                            <img src="<?='data:image/jpeg;base64,'.base64_encode($row['picture'])?>"   width="100px" />
+                            </div>
+                            <div class="col-md-7">
+                                <h4 class="card-title" style="color: rgb(112, 66, 50)"><?php echo $row['name']?></h4>
+                            </div>
+                        </div>
+            </div>  
         </div>
         </div>
         

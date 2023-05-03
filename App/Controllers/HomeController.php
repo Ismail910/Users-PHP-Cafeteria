@@ -23,7 +23,7 @@ class HomeController extends Controller
     public function index()
     {
         $data['products'] = $this->product->getAllProducts();
-        $data['user'] = $this->user->getAllUsers();
+        $data['user'] = $this->user->getUser(2);
         $data['orders'] = $this->OrderDetails->getORders();
        
         return $this->view('products/index', $data);
