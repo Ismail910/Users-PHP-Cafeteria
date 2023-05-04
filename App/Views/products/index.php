@@ -20,7 +20,7 @@
                             <div class="col-md-7">
                                 <h4 class="card-title" style="color: rgb(112, 66, 50)"><?php echo $row['name']?></h4>
                             </div>
-                        </div>
+                    </div>
             </div>  
         </div>
         </div>
@@ -59,7 +59,9 @@
                         <h4 class="card-title" style="color: rgb(112, 66, 50)"> <?php echo $row['name']?></h4>
                         <p class="card-text " >Price:<span class="font-weight-bold" style="color:orange" ><?php echo $row["price"] ?></span>$</p>
 
-                        <button href="#" class="btn rounded-pill"style="color:white;background-color:orange">Added To Cart</button>
+                        <button href="#"  onClick="addToCard(<?= $row['id'];?>)"
+                         class="btn rounded-pill"style="color:white;background-color:orange">Added To Cart</button>
+                         
                      </div>
                 </div>
             </div>
