@@ -72,8 +72,7 @@ class HomeController extends Controller
 
             ];
             echo json_encode($result);
-
-        
+     
         } catch (Exception $e) {
             $data['error'] = "'Caught exception: ',   $e->getMessage(), '\n'";    
         }
