@@ -130,8 +130,8 @@ class UsersController extends Controller
             if(isset($_POST['email']) && isset($_POST['password'])){
             if ($row['email'] == $_POST['email'] and $row['password'] == $_POST['password'] ){
                 
-                    if($row['isAdmin']==false){
-                        $data['errorLogin']="this user not Admin";
+                    if($row['isAdmin']==true){
+                        $data['errorLogin']="this user not User";
                 
                         if(isset($_POST['email'])){
                         $data['oldDataEmail']=$_POST['email'];}
