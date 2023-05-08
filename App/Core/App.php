@@ -70,7 +70,6 @@ class App
                      call_user_func_array([$controller,$this->action],$this->params);
                      return;
                 }else{
-                    var_dump("asd");
                     $view = new View('users/login');
                 return $view;
         
