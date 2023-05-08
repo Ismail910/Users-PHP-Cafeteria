@@ -1,7 +1,7 @@
 <?php 
 // define pase url for the project 
 
-define("BURL","http://cafeteria.local:8080/");
+define("BURL","http://cafeteriauser.local:8080/");
 
 /**
  * databdefine("DB_NAME","cafeteria");ase configuration 
