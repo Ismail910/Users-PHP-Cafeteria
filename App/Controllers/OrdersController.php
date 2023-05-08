@@ -9,13 +9,18 @@ class OrdersController extends Controller
     public function __construct()
     {
         $this->conn = new Orders();
+
+
     }
 
 
     public function index()
     {
-        $data['products'] = $this->conn->getAllProducts();
-        return $this->view('products/index',$data);
+        $id=$_POST['userID'];
+        $data['orders'] = $this->conn->getUserOrder($userID);
+        // var_dump($data);
+
+        return $this->view('OrderUser/index',$data,$id);
     }
 
 
@@ -30,7 +35,8 @@ class OrdersController extends Controller
             $userroomNumber = $_POST['userroomNumber'];
             $dataInsert = Array ( 
                             "notes" => $notes ,
-                            "userID" => $userID
+                            "userID" => $_SESSION["id"]
+                            ,
                             );
             if(!isset($userID) and empty($userID)){
                 $data['erroruserid'] = "Please Select User";
