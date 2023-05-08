@@ -17,19 +17,7 @@
     <div class="col-md-8">
       <h1>My Cafeteria Menu</h1>
     </div>
-    <div class="col-md-4">
-    <div class="btn-group">
-        <button class="btn btn-secondary btn-lg dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-            All Users
-        </button>
-        <ul class="dropdown-menu dropdown-menu-dark">
-                    <?php foreach($users as $row): ?>
-                      <li ><a class="dropdown-item" href="#" onclick="selectUser(this,'<?php echo $row['id']; ?>')"><?php echo $row['name']; ?></a></li>
-                    <?php endforeach; ?>
-        </ul>
-    </div>
-  </div>
-  
+
   <div class="row">
     <div class="col-md-8 ">
         <div class="row">

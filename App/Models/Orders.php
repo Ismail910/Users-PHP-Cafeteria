@@ -19,6 +19,10 @@ class Orders
     {
         return $this->db->connect()->insert($this->table,$data);
     }
+    public function getUserOrder($id)
+    {
+        return $this->db->rawQuery("select * from `$this->table` where userID=$id");
+    }
 
 
 }

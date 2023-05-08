@@ -142,6 +142,7 @@ class UsersController extends Controller
 
                     session_start();    
                     $_SESSION["email"]=$row["email"];
+                    $_SESSION["id"]=$row["id"];
                 $data['users']=$this->conn->getAllUsersByRole(0);  
                 $data['products'] = $this->connProduct->getAllProducts();
                     $dsn = "mysql:host=127.0.0.1;dbname=cafeteria;port=3306;";
