@@ -1,10 +1,10 @@
 <?php 
 // define pase url for the project 
 
-define("BURL","http://cafeteria.local:700/");
+define("BURL","http://cafeteria.local:8080/");
 
 /**
- * database configuration 
+ * databdefine("DB_NAME","cafeteria");ase configuration 
  */
 
 define("DB_HOST","localhost");

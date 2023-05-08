@@ -3,12 +3,14 @@
 // define routes 
 function url($url='')
 {
-    echo BURL.$url;
+    // if(isset($_SESSION["email"]))
+        echo BURL.$url;
 }
 
 // redirect
 function redirect($url)
 {
-    return  BURL.$url;
+    // if(isset($_SESSION["email"]))
+        return  BURL.$url;
 }
 

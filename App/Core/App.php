@@ -11,6 +11,7 @@ class App
     // params 
     protected $params=[];
 
+
     public function __construct()
     {
         $this->prepareURL($_SERVER['REQUEST_URI']);
@@ -28,6 +29,8 @@ class App
      */
     private function prepareURL($url)
     {
+    
+
         $url = trim($url,"/");
         if(!empty($url))
         {
@@ -61,7 +64,14 @@ class App
             // check if methos is exist
             if(method_exists($controller,$this->action))
             {
-                call_user_func_array([$controller,$this->action],$this->params);
+                // var_dump($this->action);
+                if(isset($_SESSION["email"] )or $this->action=='login' or $this->action=='validationlogin' ){
+                     call_user_func_array([$controller,$this->action],$this->params);
+                }else{
+                    $view = new View('users/login');
+                return $view;
+        
+                }
             }
             else 
             {
