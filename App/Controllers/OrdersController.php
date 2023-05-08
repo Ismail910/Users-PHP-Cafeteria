@@ -81,7 +81,6 @@ if ($res === false) {
             {
                
                 // Insert each order item into the database
-                session_start();
                 if (isset($_SESSION['cart'])) {
                     foreach ($_SESSION['cart'] as $item) {
                         $pdo = new PDO($dsn, $username, $password);

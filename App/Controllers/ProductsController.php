@@ -145,7 +145,7 @@ class ProductsController extends Controller
     //////////////////////////////////////////////////////////
     public function home()
     {
-        session_start();
+        // session_start();
         unset($_SESSION["cart"]);
         $data['products'] = $this->conn->getAllProducts();
         $data['users']=$this->conn_users->getAllUsersByRole(0);  
@@ -170,7 +170,6 @@ class ProductsController extends Controller
         if($pro)
         {
             
-            session_start();
             // Check if the cart exists in the session
             if (isset($_SESSION['cart'])) {
             foreach ($_SESSION['cart'] as $i => $result){
@@ -200,7 +199,6 @@ class ProductsController extends Controller
     
     public function cart($id,$quantity,$total)
     {
-        session_start();
         $totalPrice=$total;
         $pro=$this->conn->getProduct($id);
         if($pro)    

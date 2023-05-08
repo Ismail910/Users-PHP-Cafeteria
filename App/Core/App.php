@@ -64,10 +64,13 @@ class App
             // check if methos is exist
             if(method_exists($controller,$this->action))
             {
-                // var_dump($this->action);
-                if(isset($_SESSION["email"] )or $this->action=='login' or $this->action=='validationlogin' ){
+                session_start();  
+                // var_dump($_SESSION["email"]);
+                if(isset($_SESSION["email"])or $this->action=='login' or $this->action=='validationlogin' ){
                      call_user_func_array([$controller,$this->action],$this->params);
+                     return;
                 }else{
+                    var_dump("asd");
                     $view = new View('users/login');
                 return $view;
         
