@@ -1,10 +1,11 @@
 <?php  include(VIEWS.'template'.DS.'header.php');
 echo "
-<script src='https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js' integrity='sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN' crossorigin='anonymous'></script>
+  <script src='https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js'></script>
+
     ";
 ?>
     <link rel="stylesheet" href="<?=BURL.'css/styleTable.css'?>"/>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
 
     <div class="container">
         <div class="row">
@@ -25,20 +26,35 @@ echo "
                         <tr>
                             <td> <?php echo $i; $i++; ?></td>
                             <td><?php echo $row['date']; ?>
-                                <p>
+                                <button type="button" class="btn btn-info text-white" data-bs-toggle="collapse" data-bs-target="#linux">Click me</button>
+
+                                <div id="linux" class="collapse">
+                                    <div style="border:1px solid yellow";>
+                                        <?php
+                                        foreach($orderDetails as $pic): ?>
+                                        <?php if($row['id']==$pic['o_id']): ?>
+                                       <img src="<?='data:image/jpeg;base64,'.base64_encode($pic['picture'])?>"  height="40px" width="60px" />
+                                       <p><?php echo $pic['name']; ?><p>
+                                       <p><?php echo $pic['quantity']; ?><p>
+                                       <?php endif;?>
+                                <?php endforeach;  ?>
+                            <p><?php echo $row['totalPrice']; ?><p>
+                                    </div>
+                                </div>
+<!--                                <p>-->
 <!--                                    <a class="btn btn-primary" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">-->
 <!--                                        Link with href-->
 <!--                                    </a>-->
-
-                                    <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample" aria-label="Toggle navigation">
-                                        Button with data-bs-target
-                                    </button>
-                                </p>
-                                <div class="collapse" id="collapseExample">
-                                    <div class="card card-body">
-                                        Some placeholder content for the collapse component. This panel is hidden by default but revealed when the user activates the relevant trigger.
-                                    </div>
-                                </div>
+<!---->
+<!--                                    <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample" aria-label="Toggle navigation">-->
+<!--                                        Button with data-bs-target-->
+<!--                                    </button>-->
+<!--                                </p>-->
+<!--                                <div class="collapse" id="collapseExample">-->
+<!--                                    <div class="card card-body">-->
+<!--                                        Some placeholder content for the collapse component. This panel is hidden by default but revealed when the user activates the relevant trigger.-->
+<!--                                    </div>-->
+<!--                                </div>-->
 
 
                             </td>

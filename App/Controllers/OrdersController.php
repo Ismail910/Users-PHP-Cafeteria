@@ -13,6 +13,7 @@ class OrdersController extends Controller
 
     public function index()
     {
+        $data['orderDetails'] = $this->conn->order_details($_SESSION['id']);
         $data['orders'] = $this->conn->getUserOrder($_SESSION['id']);
         return $this->view('orders/index',$data);
     }

@@ -30,5 +30,12 @@ class Orders
         return $this->db->rawQuery("select * from `$this->table` where userID=$id");
     }
 
+    public function order_details($userId)
+    {
+
+        return $this->db->rawQuery(" SELECT `order`.`id`as`o_id`,`user`.`id`,`product`.`picture`, `product`.`name` ,`orderdetails`.`totalPriceProduct`,`orderdetails`.`quantity`  FROM `order` , `orderdetails` ,`product`,`user` WHERE   `order`.`id`=`orderdetails`.`orderID` and
+        `orderdetails`.`productID`=`product`.`id` and `order`.`userID`=`user`.`id` and `user`.`id`=$userId" ) ;
+    }
+
 
 }
