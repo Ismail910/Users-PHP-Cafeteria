@@ -26,9 +26,10 @@ echo "
                         <tr>
                             <td> <?php echo $i; $i++; ?></td>
                             <td><?php echo $row['date']; ?>
-                                <button type="button" class="btn btn-info text-white" data-bs-toggle="collapse" data-bs-target="#linux">Click me</button>
+<!--                                <button onclick="toggleDiv()" type="button" class="btn btn-info text-white" data-bs-toggle="collapse" data-bs-target="#linux">Click me</button>-->
+                                <button onclick="toggleDiv('<?php echo $i;?>')" type="button" class="btn btn-info text-white" >Click me</button>
 
-                                <div id="linux" class="collapse">
+                                <div id="<?php echo $i;?>d" class="collapse" style="display: none;" >
                                     <div style="border:1px solid yellow";>
                                         <?php
                                         foreach($orderDetails as $pic): ?>
@@ -72,5 +73,23 @@ echo "
             </div>
         </div>
     </div>
+
+
+<script>
+    function toggleDiv(id) {
+        var div = document.getElementById(id+"d");
+        if (div.style.display === "none") {
+            div.style.display = "block";
+        } else {
+            div.style.display="none";
+        }
+    }
+
+    // showMoreList=[1,1,1];
+    // onShow(index: number) {
+    //     this.showMoreList[index] = !this.showMoreList[index];
+    // }
+</script>
+
 
 <?php  include(VIEWS.'template'.DS.'footer.php'); ?>
