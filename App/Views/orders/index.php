@@ -42,22 +42,6 @@ echo "
                             <p><?php echo $row['totalPrice']; ?><p>
                                     </div>
                                 </div>
-<!--                                <p>-->
-<!--                                    <a class="btn btn-primary" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">-->
-<!--                                        Link with href-->
-<!--                                    </a>-->
-<!---->
-<!--                                    <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample" aria-label="Toggle navigation">-->
-<!--                                        Button with data-bs-target-->
-<!--                                    </button>-->
-<!--                                </p>-->
-<!--                                <div class="collapse" id="collapseExample">-->
-<!--                                    <div class="card card-body">-->
-<!--                                        Some placeholder content for the collapse component. This panel is hidden by default but revealed when the user activates the relevant trigger.-->
-<!--                                    </div>-->
-<!--                                </div>-->
-
-
                             </td>
                             <td><?php echo $row['status']; ?></td>
                             <td class="text-center"><?php echo $row['totalPrice']; ?></td>
@@ -84,11 +68,6 @@ echo "
             div.style.display="none";
         }
     }
-
-    // showMoreList=[1,1,1];
-    // onShow(index: number) {
-    //     this.showMoreList[index] = !this.showMoreList[index];
-    // }
 </script>
 
 
