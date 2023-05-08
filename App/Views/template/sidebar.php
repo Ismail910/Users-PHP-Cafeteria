@@ -29,6 +29,12 @@
 <!--        <p>Checks</p></a></li>-->
 
     <li class="row g-0" id="orders"><a href="<?php url('orders/index'); ?>"> <i class="fa-solid fa-cart-shopping"></i><p>orders</p></a></li>
+<!---->
+<!--    <li class="row g-0" id="checks"><a href="--><?php //url('checks/index'); ?><!--">-->
+<!--    <i class="fa-solid fa-cart-shopping"></i>-->
+<!--        <p>Checks</p></a></li>-->
+
+<!--    <li class="row g-0" id="orders"><a href="--><?php //url('OrdersUser/index'); ?><!--"> <i class="fa-solid fa-cart-shopping"></i><p>orders</p></a></li>-->
    </ul>
 
 </sidebar>

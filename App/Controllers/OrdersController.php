@@ -1,7 +1,5 @@
 <?php 
 
-
-
 class OrdersController extends Controller 
 {
     private $conn;
@@ -9,6 +7,8 @@ class OrdersController extends Controller
     public function __construct()
     {
         $this->conn = new Orders();
+
+
     }
 
     public function index()
