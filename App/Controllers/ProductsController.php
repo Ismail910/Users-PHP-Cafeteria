@@ -150,7 +150,7 @@ class ProductsController extends Controller
         $data['products'] = $this->conn->getAllProducts();
         $data['users']=$this->conn_users->getAllUsersByRole(0);  
 
-        $dsn = "mysql:host=127.0.0.1;dbname=cafeteria;port=3306;";
+        $dsn = "mysql:host=127.0.0.1;dbname=cafeteria;port=8111;";
         $username = "root";
         $password = "";
         $pdo = new PDO($dsn, $username, $password);

@@ -140,7 +140,9 @@ class UsersController extends Controller
                     }
                  session_destroy();
 
-                    session_start();    
+                    session_start(); 
+                    $_SESSION["id"]=$row["id"];
+                    
                     $_SESSION["email"]=$row["email"];
                     $_SESSION["id"]=$row["id"];
                 $data['users']=$this->conn->getAllUsersByRole(0);  

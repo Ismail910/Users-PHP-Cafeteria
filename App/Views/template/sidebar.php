@@ -9,26 +9,32 @@
     <p>Home</p>
     </a>
     </li>
+<!---->
+<!--    <li class="row g-0" id="categories">-->
+<!--     <a href="--><?php //url('categories/index'); ?><!--">-->
+<!--     <i class="fa-solid fa-briefcase"></i> -->
+<!--     <p>Categories</p>-->
+<!--    </a>-->
+<!--    </li>-->
 
-    <li class="row g-0" id="categories">
-     <a href="<?php url('categories/index'); ?>">
-     <i class="fa-solid fa-briefcase"></i> 
-     <p>Categories</p>
-    </a>
-    </li>
+<!--    <li class="row g-0" id="products"><a href="--><?php //url('products/index'); ?><!--">-->
+<!--    <i class="fa-solid fa-cart-shopping"></i>-->
+<!--    <p>Products</p>-->
+<!--    </a></li>-->
+<!--    <li class="row g-0 " id="users"><a href="--><?php //url('users/index'); ?><!--">-->
+<!--    <i class="fa fa-users"></i><p>Users</p></li>-->
 
-    <li class="row g-0" id="products"><a href="<?php url('products/index'); ?>">
-    <i class="fa-solid fa-cart-shopping"></i>
-    <p>Products</p>
-    </a></li>
-    <li class="row g-0 " id="users"><a href="<?php url('users/index'); ?>">
-    <i class="fa fa-users"></i><p>Users</p></li>
+<!--    <li class="row g-0" id="checks"><a href="--><?php //url('checks/index'); ?><!--">-->
+<!--    <i class="fa-solid fa-cart-shopping"></i>-->
+<!--        <p>Checks</p></a></li>-->
 
-    <li class="row g-0" id="checks"><a href="<?php url('checks/index'); ?>">
-    <i class="fa-solid fa-cart-shopping"></i>
-        <p>Checks</p></a></li>
+    <li class="row g-0" id="orders"><a href="<?php url('orders/index'); ?>"> <i class="fa-solid fa-cart-shopping"></i><p>orders</p></a></li>
+<!---->
+<!--    <li class="row g-0" id="checks"><a href="--><?php //url('checks/index'); ?><!--">-->
+<!--    <i class="fa-solid fa-cart-shopping"></i>-->
+<!--        <p>Checks</p></a></li>-->
 
-    <li class="row g-0" id="orders"><a href=""> <i class="fa-solid fa-cart-shopping"></i><p>orders</p></a></li>
+<!--    <li class="row g-0" id="orders"><a href="--><?php //url('OrdersUser/index'); ?><!--"> <i class="fa-solid fa-cart-shopping"></i><p>orders</p></a></li>-->
    </ul>
 
 </sidebar>
