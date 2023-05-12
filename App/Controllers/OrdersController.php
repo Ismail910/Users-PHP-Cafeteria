@@ -86,6 +86,13 @@ if ($res === false) {
                     
                     if($res){
                         $data['success'] = "Order Added Successfully";
+                        $pdo = new PDO($dsn, $username, $password);
+
+                        $query = "select * from `room`";
+                        $select_stmt = $pdo->prepare($query);
+                        $res=$select_stmt->execute();
+                        $dataroom = $select_stmt->fetchAll(PDO::FETCH_ASSOC);
+                        $data['rooms']=$dataroom;
                         unset($_SESSION["cart"]);
                         return $this->view('home/index',$data);
                     }

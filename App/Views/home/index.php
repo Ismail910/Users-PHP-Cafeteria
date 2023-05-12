@@ -13,6 +13,15 @@
                 <h3 class="alert alert-danger text-center"><?php  echo $errorroom; ?></h3>
             <?php endif; ?>
 <div class="container">
+    <!-- for user -->
+    <div class="row">
+        <div id="latest" class="col-12">
+            <h1 >Latest Order</h1>
+        </div>
+        
+    </div>
+    
+    <!-- for user -->
   <div class="row">
     <div class="col-md-8">
       <h1>My Cafeteria Menu</h1>
@@ -137,6 +146,18 @@ function openOrderDetails(id,nameProduct) {
         const newElement = document.createElement("hr");
         newElement.id="hr"+data["name"];
         row.insertAdjacentElement("afterend", newElement);
+        //for user
+        let rowLatest = document.createElement("span");
+        rowLatest.id="idlatest"+data['name']
+        rowLatest.className="card border border-white col-md-2";
+        rowLatest.innerHTML=`
+                     <img id='image${data['name']}' src="${imageUrl}"  height="100%" width="100px" />
+                     <h4 class="card-title" id="${data['name']}" style="color: rgb(112, 66, 50)">${data['name']}</h4>
+                     
+        `;
+        let exitelementlatest = document.getElementById("latest") ;
+        exitelementlatest.insertAdjacentElement("afterend", rowLatest);
+        //foruser
         
     }    
     let totalprice=document.getElementById("totalPrice") ;
@@ -166,6 +187,8 @@ function openOrderDetails(id,nameProduct) {
     totalPriceOrder.value=data["totalPrice"];
         const rowid = document.getElementById("id"+data["name"]);
         rowid.remove();
+        const rowlatestid =  document.getElementById("idlatest"+data['name']);
+        rowlatestid.remove();
         const rowhr = document.getElementById("hr"+data["name"]);
         rowhr.remove();
         
