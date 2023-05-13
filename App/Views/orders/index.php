@@ -27,7 +27,7 @@ echo "
                             <td> <?php echo $i; $i++; ?></td>
                             <td><?php echo $row['date']; ?>
 <!--                                <button onclick="toggleDiv()" type="button" class="btn btn-info text-white" data-bs-toggle="collapse" data-bs-target="#linux">Click me</button>-->
-                                <button onclick="toggleDiv('<?php echo $i;?>')" type="button" class="btn btn-info text-white" >Click me</button>
+                                <button onclick="toggleDiv('<?php echo $i;?>')" type="button" class="btn btn-warning text-white ms-5" >More Details</button>
 
                                 <div id="<?php echo $i;?>d" class="collapse" style="display: none;" >
                                     <div style="border:1px solid yellow";>
@@ -46,9 +46,15 @@ echo "
                             <td><?php echo $row['status']; ?></td>
                             <td class="text-center"><?php echo $row['totalPrice']; ?></td>
                             <td>
-                                <a href="#" class="btn btn-danger">
-                                    <i>deliver</i>
-                                </a>
+                                    <?php if($row['status']=="processing"): ?>
+                                        <button id="<?php echo $row['id'];?>btnCancel" onclick="cancelOrder('<?php echo $row['id'];?>')" type="button" class="btn btn-dark">Cancel</button>
+                                        <!--                                        <i>processing</i>-->
+<!--                                    --><?php //elseif($row['status']=="done") : ?>
+<!--                                        <i>done</i>-->
+                                    <?php else : ?>
+                                        <button type="button" class="btn btn-dark" disabled>Cancel</button>
+                                        <!--                                        <i>outfordelivery</i>-->
+                                    <?php endif;?>
                             </td>
                         </tr>
                         </tbody>
@@ -67,6 +73,12 @@ echo "
         } else {
             div.style.display="none";
         }
+    }
+    function cancelOrder(id){
+        var elm =document.getElementById(id+"btnCancel");
+        elm.disabled = true;
+        console.log(id);
+
     }
 </script>
 

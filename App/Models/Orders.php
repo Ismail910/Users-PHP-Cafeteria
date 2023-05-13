@@ -38,4 +38,10 @@ class Orders
     }
 
 
+    public function updateOrderStatus($id,$status)
+    {
+        return $this->db->rawQuery("select * from `$this->table` set status=$status  where id=$id");
+    }
+
+
 }
